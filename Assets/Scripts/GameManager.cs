@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
     public Transform SpawnPoint;
     public float SpawnRateMin;
     public float SpawnRateMax;
-    public TextMeshProUGUI ScoreTxt;
 
+    public GameObject ScoreObj;
     public GameObject StartBtn;
     public GameObject player;
 
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     { 
 
         StartBtn.SetActive(false);
-        ScoreTxt.gameObject.SetActive(true);
+        ScoreObj.SetActive(true);
         player.SetActive(true);
 
 
