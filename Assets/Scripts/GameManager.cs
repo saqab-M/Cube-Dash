@@ -6,7 +6,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    public GameObject Obstacle;
+    public GameObject[] Obstacles;
+    //public GameObject Obstacle2;
+
+
     public Transform SpawnPoint;
     public float SpawnRateMin;
     public float SpawnRateMax;
@@ -19,11 +22,15 @@ public class GameManager : MonoBehaviour
     {
         while (true) 
         {
+
+            GameObject obstacleToSpawn = Obstacles[Random.Range(0, Obstacles.Length)];
+
+
             float waitTime = Random.Range(SpawnRateMin, SpawnRateMax);
 
             yield return new WaitForSeconds(waitTime);
 
-            Instantiate(Obstacle, SpawnPoint.position, Quaternion.identity);
+            Instantiate(obstacleToSpawn, SpawnPoint.position, Quaternion.identity);
         }
     }
 

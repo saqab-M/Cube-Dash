@@ -11,8 +11,4 @@ public class ObstacleController : MonoBehaviour
         transform.Translate(Vector3.back * speed * Time.deltaTime);
     }
 
-    private void OnBecameInvisible()
-    {
-        Destroy(gameObject);
-    }
 }

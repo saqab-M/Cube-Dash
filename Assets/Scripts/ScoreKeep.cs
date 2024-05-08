@@ -17,7 +17,7 @@ public class ScoreKeep : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Obstacle") 
+        if (other.gameObject.tag == "ObstacleWireFrame") 
         {
             score++;
             UpdateScore();

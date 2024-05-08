@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Obstacle
+  - ObstacleWireFrame
   layers:
   - Default
   - TransparentFX
