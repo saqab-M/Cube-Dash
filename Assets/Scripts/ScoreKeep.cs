@@ -19,11 +19,15 @@ public class ScoreKeep : MonoBehaviour
     {
         if (other.gameObject.tag == "ObstacleWireFrame") 
         {
-            score++;
-            UpdateScore();
+            IncreaseScore();
         }
     }
 
+    public void IncreaseScore(int points = 1)
+    {
+        score = score + points;
+        UpdateScore();
+    }
     private void UpdateScore() 
     {
         scoreTxt.text = score.ToString();

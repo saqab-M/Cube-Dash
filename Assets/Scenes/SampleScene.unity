@@ -432,6 +432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 20
+  scoreScript: {fileID: 882771207}
 --- !u!1 &526481475
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,6 +465,7 @@ MonoBehaviour:
   Obstacles:
   - {fileID: 4075651885656226958, guid: 3d5562b51bb39754bb7fad79cf3f04a3, type: 3}
   - {fileID: 3939420250265992216, guid: 3beb429c20625bf458d897931592eead, type: 3}
+  - {fileID: 3104401129617345548, guid: d3d10a55161f33848b61894a587eddb6, type: 3}
   SpawnPoint: {fileID: 1855077022}
   SpawnRateMin: 1
   SpawnRateMax: 3

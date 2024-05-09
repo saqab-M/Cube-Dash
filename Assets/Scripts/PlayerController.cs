@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
 
     public float jumpForce;
+    public ScoreKeep scoreScript; // ref to scoreKeep script
 
     Rigidbody rb;
     bool onGround;
@@ -47,6 +48,11 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Obstacle")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        else if (other.gameObject.tag == "Coin")
+        {
+            scoreScript.IncreaseScore(5);
+            Destroy(other.gameObject);
         }
     }
 
