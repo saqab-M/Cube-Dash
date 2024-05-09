@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 
     public float jumpForce;
     public ScoreKeep scoreScript; // ref to scoreKeep script
+    public AudioSource coinSound;
 
     Rigidbody rb;
     bool onGround;
@@ -52,6 +53,7 @@ public class PlayerController : MonoBehaviour
         else if (other.gameObject.tag == "Coin")
         {
             scoreScript.IncreaseScore(2);
+            coinSound.Play();
             Destroy(other.gameObject);
         }
     }
