@@ -466,6 +466,12 @@ MonoBehaviour:
   - {fileID: 4075651885656226958, guid: 3d5562b51bb39754bb7fad79cf3f04a3, type: 3}
   - {fileID: 3939420250265992216, guid: 3beb429c20625bf458d897931592eead, type: 3}
   - {fileID: 3104401129617345548, guid: d3d10a55161f33848b61894a587eddb6, type: 3}
+  - {fileID: 7021802661348520302, guid: 0ef856db06f1525458540847ac34c642, type: 3}
+  - {fileID: 6139407808926974247, guid: 04222aa9ca138e44a84b842f547f938f, type: 3}
+  - {fileID: 226062067057920943, guid: 6497ed865360f334db0b06ad1e455f24, type: 3}
+  - {fileID: 2915291540863235676, guid: 5953e6e2b9b82314ab2f7109d475d225, type: 3}
+  - {fileID: 7815406672410781056, guid: 1b81285dcafc32d4aabab8fb567e229a, type: 3}
+  - {fileID: 5520914180033427374, guid: bf5a7d0ec7753854ebeee53e1ec083b1, type: 3}
   SpawnPoint: {fileID: 1855077022}
   SpawnRateMin: 1
   SpawnRateMax: 3
@@ -735,7 +741,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 43
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
