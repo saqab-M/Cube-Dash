@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.gameObject.tag == "Coin")
         {
-            scoreScript.IncreaseScore(5);
+            scoreScript.IncreaseScore(2);
             Destroy(other.gameObject);
         }
     }
