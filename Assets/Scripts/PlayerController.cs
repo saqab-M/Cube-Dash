@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "Obstacle")
         {
+            scoreScript.SaveScore();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         else if (other.gameObject.tag == "Coin")

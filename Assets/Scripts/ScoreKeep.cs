@@ -13,13 +13,17 @@ public class ScoreKeep : MonoBehaviour
     int highScore = 0;
 
     private const string HIGH_SCORE_KEY = "HighScore";
+    private const string LAST_SCORE_KEY = "lastScore";
 
     private void Start()
     {
+        score = PlayerPrefs.GetInt(LAST_SCORE_KEY, 0);
         highScore = PlayerPrefs.GetInt(HIGH_SCORE_KEY,0);
         UpdateScore();
         UpdateHighScore();
+
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -50,5 +54,20 @@ public class ScoreKeep : MonoBehaviour
     private void UpdateHighScore() 
     { 
         highScoreTxt.text = "High Score: " + highScore.ToString();
+    }
+
+    public void StartNewRound()
+    {
+        score = 0;
+        UpdateScore();
+    }
+    public void SaveScore() 
+    {
+        PlayerPrefs.SetInt(LAST_SCORE_KEY, score);
+        if (score > highScore)
+        {
+            PlayerPrefs.SetInt(HIGH_SCORE_KEY, score);
+        }
+        PlayerPrefs.Save();
     }
 }

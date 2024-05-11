@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     public GameObject ScoreObj;
     public GameObject StartBtn;
     public GameObject player;
+    public GameObject playerIcon;
+
+    public ScoreKeep scoreScript;
 
     IEnumerator SpawnObsatcles()
     {
@@ -38,9 +41,11 @@ public class GameManager : MonoBehaviour
     { 
 
         StartBtn.SetActive(false);
-        ScoreObj.SetActive(true);
+      //  ScoreObj.SetActive(true);
         player.SetActive(true);
+        playerIcon.SetActive(false);
 
+        scoreScript.StartNewRound();
 
         StartCoroutine("SpawnObsatcles");
     }
